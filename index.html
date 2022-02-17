@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="script.js">
+
+	</script>
+</head>
+
+<body onload="keyListener()">
+
+<h1>GEOGRAPHY HANGMAN</h1>
+
+<select id='difficult'> 
+  <option value='sel'> Select </option>
+  <option value='cont'> Continents </option>
+  <option value='stat'> US States </option>
+  <option value='count'> Countries </option>
+</select>
+
+<button onclick="startGame()">Start New Game</button>
+
+<h1 id="youDidIt" style="display:none"></h1>
+
+<p id="correctWord" style="display:none"></p>
+
+<p></p>
+
+<img id="image" src="">
+
+<p id="printWord"></p>
+
+<table>
+  <tr>
+    <th>
+      <input id = "guessLetter" type="text" placeholder="?" style="display:none">
+    </th>
+    <th>
+      <button id="submitLetter" onclick="guessLetter()" style="display:none">Guess Letter</button>
+    </th>
+  </tr>
+</table>
+
+
+<h3 style="display:none" id="guest">Guessed Letters:</h3>
+
+<div id="guessedLetters" ></div>
+
+<h4 style="display:none" id="guessRem">Guesses Remaining:</h4>
+<div id="numGuesses"></div>
+
+<div id="word"></div>
+
+</body>
+</html>
